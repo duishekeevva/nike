@@ -1,0 +1,40 @@
+.the-nike-section {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.the-nike-box {
+  padding: 60px 0 93px;
+  &_subtitle {
+    color: black;
+  }
+  &_title {
+    color: #77D131;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+  }
+  &_text {
+    border-top: 3px solid black;
+  }
+  &_text p {
+    color: black;
+    padding: 24px 0 28px;
+  }
+  &_tagline {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-transform: none;
+    font-size: 19px;
+    font-weight: 300;
+    & span:nth-child(2) {
+      opacity: 0.5;
+    }
+  }
+  &_excerpt {
+    margin-top: 38px;
+    & button {
+      color: black;
+      font-size: 19px;
+    }
+  }
+}

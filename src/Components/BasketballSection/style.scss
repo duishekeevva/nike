@@ -1,0 +1,67 @@
+.basketball-section {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.basketball-box {
+  padding: 60px 0 115px;
+  &_subtitle {
+    color: #000;
+  }
+  &_title {
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+  }
+  &_caption {
+    border-bottom: 3px solid black;
+  }
+  &_text {
+    padding: 24px 0 40px;
+  }
+  &_text p {
+    color: black;
+    padding: 2px;
+  }
+  &_slider {
+    text-align: center;
+    padding: 44px 0 65px;
+    border-bottom: 3px solid black;
+  }
+  &_years {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    gap: 66px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 20px 0;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    & span:hover {
+      color: #FB0223;
+    }
+  }
+  &_players {
+    font-family: 'Roboto', sans-serif;
+    &__player {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 3px solid black;
+      &___more {
+        color: black;
+        font-size: 19px;
+      }
+    }
+    &__player p{
+      color: black;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      padding: 20px 0;
+    }
+  }
+  &_excerpt button{
+    color: black;
+    font-size: 19px;
+    margin-top: 38px;
+  }
+}

@@ -1,0 +1,20 @@
+.usa-section {
+  background-color: black;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.usa-box {
+  padding: 60px 0 93px;
+  &_caption {
+    color: #fff;
+  }
+  &_text {
+    padding: 24px 0;
+  }
+  &_excerpt {
+    margin-top: 38px;
+    & button {
+      font-size: 19px;
+    }
+  }
+}

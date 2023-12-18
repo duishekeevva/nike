@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from "./Components/Header/Header";
+import HeroSection from "./Components/HeroSection/HeroSection";
+import CollectionSection from "./Components/CollectionSection/CollectionSection";
+import TeamSection from "./Components/TeamSection/TeamSection";
+import FourthSection from "./Components/FourthSection/FourthSection";
+import BasketballSection from "./Components/BasketballSection/BasketballSection";
+import UsaSection from "./Components/UsaSection/UsaSection";
+import TheNikeSection from "./Components/TheNikeSection/TheNikeSection";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div>
+            <Header/>
+            <HeroSection/>
+            <CollectionSection/>
+            <TeamSection/>
+            <FourthSection/>
+            <BasketballSection/>
+            <UsaSection/>
+            <TheNikeSection/>
+        </div>
+    );
+};
 
 export default App;

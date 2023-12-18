@@ -1,0 +1,38 @@
+.fourth-section {
+    background-color: #000;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+.bryant-box {
+    padding: 60px 0 115px;
+    &_title {
+        color: #6021DB;
+    }
+    &_caption {
+        color: #fff;
+    }
+    &_text {
+        padding: 25px 0;
+    }
+    &_text p {
+        padding: 0;
+    }
+    &_excerpt {
+        margin-top:32px;
+        & button {
+            font-size: 19px;
+        }
+    }
+}
+
+.overview {
+    font-family: 'Roboto', sans-serif;
+    & span {
+        color: #fff;
+    }
+    &-text {
+        text-transform: none;
+        font-weight: 300;
+    }
+}

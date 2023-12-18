@@ -1,0 +1,87 @@
+.collection-section {
+    padding: 60px 0 68px 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: black;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-4 {
+    width: 33.33%;
+    padding: 15px;
+}
+
+p {
+    color: white;
+    padding-bottom: 24px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 3px solid #FFF;
+    border-top: 3px solid #FFF;
+}
+
+h2 {
+    color: #FB0223;
+    font-size: 65px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-top: 3px solid #FFF;
+}
+
+h5 {
+    width: 455px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 24px 0 15px;
+}
+
+.lakers {
+    padding: 0 33px;
+    background-color: white;
+}
+.overview {
+    font-family: 'Roboto', sans-serif;
+}
+.overview-text {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 19px;
+    margin: 16px 0;
+}
+
+.overview-text span:nth-child(2) {
+    opacity: 0.5;
+}
+
+button {
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & button {
+        font-family: 'Roboto', sans-serif;
+        font-size: 19px;
+        cursor: pointer;
+    }
+}
