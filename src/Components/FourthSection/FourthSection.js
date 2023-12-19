@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Picture from "../Assets/DRTwwktVwAARX0P 1.png";
 import './style.scss'
+import axios from "axios";
 
 const FourthSection = () => {
+    const [data, setData] =useState([])
+    useEffect(() => {
+        axios('https://65642480ceac41c0761d7ea7.mockapi.io/nike')
+            .then(({data})=>setData(data))
+    }, []);
     return (
         <section className={'fourth-section'}>
             <div className="container">
@@ -15,36 +21,20 @@ const FourthSection = () => {
                         <p>In his 20 seasons with the lakers. the lagacy of kobe bryant was a far-reaching one.</p>
                     </div>
                     <div className="row">
-                        <div className={'col-4'}>
-                            <img src={Picture} alt=""/>
-                            <div className={'overview'}>
-                                <div className={'overview-text'}>
-                                    <span>LeBron James Lakers City Edition </span>
-                                    <span>Nike NBA Swingman Jersey</span>
+                        {
+                            data.map(el=>
+                                <div className={'col-4'}>
+                                    <img className={'lakers'} src={el.src} alt=""/>
+                                    <div className={'overview'}>
+                                        <div className={'overview-text'}>
+                                            <span>{el.name} </span>
+                                            <span>{el.description}</span>
+                                        </div>
+                                        <span style={{color:'white'}}>{el.price}</span>
+                                    </div>
                                 </div>
-                                <span>$290</span>
-                            </div>
-                        </div>
-                        <div className={'col-4'}>
-                            <img src={Picture} alt=""/>
-                            <div className={'overview'}>
-                                <div className={'overview-text'}>
-                                    <span>LeBron James Lakers City Edition </span>
-                                    <span>Nike NBA Swingman Jersey</span>
-                                </div>
-                                <span>$290</span>
-                            </div>
-                        </div>
-                        <div className={'col-4'}>
-                            <img src={Picture} alt=""/>
-                            <div className={'overview'}>
-                                <div className={'overview-text'}>
-                                    <span>LeBron James Lakers City Edition </span>
-                                    <span>Nike NBA Swingman Jersey</span>
-                                </div>
-                                <span>$290</span>
-                            </div>
-                        </div>
+                            )
+                        }
                     </div>
 
                     <div className={'bryant-box_excerpt'}>

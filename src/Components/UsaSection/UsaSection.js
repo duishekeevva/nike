@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Picture from "../Assets/DRTwwktVwAARX0P 1.png";
 import './style.scss'
+import axios from "axios";
 
 const UsaSection = () => {
+    const [data, setData] =useState([])
+    useEffect(() => {
+        axios('https://65642480ceac41c0761d7ea7.mockapi.io/nike')
+            .then(({data})=>setData(data))
+    }, []);
     return (
         <section className={'usa-section'}>
             <div className="container">
@@ -14,36 +20,20 @@ const UsaSection = () => {
                         <p>Jerseys of the united sates man’s olympics basketball team, <br/> which represented the us of a in the 1992 summer olympics in barcelona.</p>
                     </div>
                     <div className="row">
-                        <div className={'col-4'}>
-                            <img className={'lakers'} src={Picture} alt=""/>
-                            <div className={'overview'}>
-                                <div className={'overview-text'}>
-                                    <span>Michael Jordan ‘92 Olympics USA</span>
-                                    <span>Nike NBA ‘92 Olympics Dream Team USA Classics Authentic Jersey</span>
+                        {
+                            data.map(el=>
+                                <div className={'col-4'}>
+                                    <img className={'lakers'} src={el.src} alt=""/>
+                                    <div className={'overview'}>
+                                        <div className={'overview-text'}>
+                                            <span>{el.name} </span>
+                                            <span>{el.description}</span>
+                                        </div>
+                                        <span style={{color:'white'}}>{el.price}</span>
+                                    </div>
                                 </div>
-                                <span>$532</span>
-                            </div>
-                        </div>
-                        <div className={'col-4'}>
-                            <img className={'lakers'} src={Picture} alt=""/>
-                            <div className={'overview'}>
-                                <div className={'overview-text'}>
-                                    <span>Michael Jordan ‘92 Olympics USA</span>
-                                    <span>Nike NBA ‘92 Olympics Dream Team USA Classics Authentic Jersey</span>
-                                </div>
-                                <span>$632</span>
-                            </div>
-                        </div>
-                        <div className={'col-4'}>
-                            <img className={'lakers'} src={Picture} alt=""/>
-                            <div className={'overview'}>
-                                <div className={'overview-text'}>
-                                    <span>Kobe Bryant Laker Authentic Edition</span>
-                                    <span>Nike NBA Authentic Jersey Purple</span>
-                                </div>
-                                <span>$115</span>
-                            </div>
-                        </div>
+                            )
+                        }
                     </div>
                     <div className={'usa-box_excerpt'}>
                         <button>

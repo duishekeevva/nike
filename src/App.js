@@ -7,19 +7,18 @@ import FourthSection from "./Components/FourthSection/FourthSection";
 import BasketballSection from "./Components/BasketballSection/BasketballSection";
 import UsaSection from "./Components/UsaSection/UsaSection";
 import TheNikeSection from "./Components/TheNikeSection/TheNikeSection";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import HomePage from "./Pages/HomePage/HomePage";
+import Admin from "./Pages/Admin/Admin";
 
 const App = () => {
     return (
-        <div>
-            <Header/>
-            <HeroSection/>
-            <CollectionSection/>
-            <TeamSection/>
-            <FourthSection/>
-            <BasketballSection/>
-            <UsaSection/>
-            <TheNikeSection/>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<HomePage/>}/>
+                <Route path='/admin' element={<Admin/>}/>
+            </Routes>
+        </BrowserRouter>
     );
 };
 
